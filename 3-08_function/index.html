@@ -18,7 +18,9 @@
 <main>
 <div class="container">
 <section>
-
+  <p id="output1"></p>
+  <p id="output2"></p>
+  <p id="output3"></p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -26,18 +28,18 @@
 <div class="container">
 <p>JavaScript Samples</p>
 </div><!-- /.container -->
-<script>
-  'use strict'
-  const answer = window.prompt('ヘルプを見ますか？');
-  console.log(answer);
-  if(answer === 'yes') {
-    window.alert('タップでジャンプ、障害物を避けます。');
-  } else if(answer === 'no'){
-    window.alert('ゲーム起動中。。。');
-  } else {
-    window.alert('yesのnoでお答え下さい。');
-  }
-</script>
 </footer>
+<script>
+  'use strict';
+
+  function total(price) {
+    const tax = 0.1;
+    return price + price * tax;
+  }
+  console.log('コーヒーメーカーの値段は' + total(8000) + '円（税込）です。');
+  document.getElementById('output1').textContent = 'コーヒーメーカーの値段は' + total(8000) + '円（税込）です。';
+  document.getElementById('output2').textContent = 'コーヒーフィルターの値段は' + total(200) + '円（税込）です。';
+  document.getElementById('output3').textContent = 'コーヒー豆の値段は' + total(1000) + '円（税込）です。';
+</script>
 </body>
 </html>
